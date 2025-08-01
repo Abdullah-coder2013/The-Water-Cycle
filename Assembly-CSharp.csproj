@@ -47,9 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\PlayerForestParkour.cs" />
+    <Compile Include="Assets\Scripts\MiniGameCity.cs" />
+    <Compile Include="Assets\Scripts\MiniGameSki.cs" />
+    <Compile Include="Assets\Scripts\ParkourObstacle.cs" />
+    <Compile Include="Assets\Scripts\MiniGameForestManager.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\StageFactsData.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\LevelManager1.cs" />
+    <Compile Include="Assets\Scripts\FactData.cs" />
     <Compile Include="Assets\InputSystem_Actions.cs" />
+    <Compile Include="Assets\Scripts\PlayerCIty.cs" />
     <Compile Include="Assets\Scripts\MiniGame1Manager.cs" />
     <Compile Include="Assets\Scripts\Information.cs" />
     <Compile Include="Assets\Scripts\IntroManager.cs" />
@@ -917,6 +926,9 @@
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
       <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Splines.Editor">
+      <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Aseprite.Common">
       <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
     </Reference>
@@ -925,9 +937,6 @@
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Splines.Editor">
-      <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.Editor">
       <HintPath>C:\Users\Abdullah\The Water Cycle\Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>

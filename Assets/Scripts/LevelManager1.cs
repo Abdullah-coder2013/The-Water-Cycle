@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager1 : MonoBehaviour
 {
@@ -15,6 +16,23 @@ public class LevelManager1 : MonoBehaviour
     private void Start()
     {
         miniGame1Manager = GameObject.Find("PrecipitationGameManager").GetComponent<MiniGame1Manager>();
+        Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
+    }
+    
+    private void OnOnFactSequenceCompleted()
+    {
+        if (precipitationType == PrecipitationType.Rain)
+        {
+            SceneManager.LoadScene("CitySewage");
+        }
+        else if (precipitationType == PrecipitationType.Snow)
+        {
+            SceneManager.LoadScene("GlacierSkiing");
+        }
+        else if (precipitationType == PrecipitationType.Hail)
+        {
+            SceneManager.LoadScene("DrainageForest");
+        }
     }
 
     public void Rain()
@@ -43,6 +61,7 @@ public class LevelManager1 : MonoBehaviour
         else if (precipitationType == PrecipitationType.Snow)
         {
             miniGame1Manager.scenePrefab = snowBackground;
+            miniGame1Manager.snow = true;
             Instantiate(snowPlayer, miniGame1Manager.startPos.position, Quaternion.identity);
         }
         else if (precipitationType == PrecipitationType.Hail)

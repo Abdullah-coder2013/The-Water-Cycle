@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour
 {
@@ -12,7 +14,11 @@ public class IntroManager : MonoBehaviour
     public GameObject scenePrefab;
     [SerializeField] private List<GameObject> obstaclePrefab;
     [SerializeField] private GameObject startMenu;
-    
+
+    [Header("Information System Integration")]
+    [SerializeField] private bool enableFactDisplay = true;
+    [SerializeField] private float factStartDelay = 2f;
+
     private List<GameObject> sceneSegments = new List<GameObject>();
     public int sceneSegmentsToSpawn = 4; // Number of segments to spawn initially
 
@@ -24,9 +30,22 @@ public class IntroManager : MonoBehaviour
         GetWidth();
         startAction = InputSystem.actions.FindAction("Start");
         BuildNewScenePref(true);
+        
+        Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
     }
-    
-    private void GetWidth() 
+
+    private void OnOnFactSequenceCompleted() {
+        // Handle fact sequence completion if needed
+        SceneManager.LoadScene("Precipitation");
+    }
+
+    private IEnumerator StartFactsWithDelay()
+    {
+        yield return new WaitForSeconds(factStartDelay);
+        Information.Instance.StartFactSequence(WaterCycleStage.Intro);
+    }
+
+    private void GetWidth()
     {
         if (scenePrefab != null)
         {
@@ -45,13 +64,18 @@ public class IntroManager : MonoBehaviour
             Debug.LogError("scenePrefab is not assigned.");
         }
     }
-    
+
     private void Update()
     {
         if (startAction.triggered)
         {
             initialized = true;
             startMenu.SetActive(false);
+            // Start displaying precipitation facts
+            if (enableFactDisplay && Information.Instance != null)
+            {
+                StartCoroutine(StartFactsWithDelay());
+            }
         }
         if (!initialized) return; // Ensure the game is initialized before updating
         foreach (var segment in sceneSegments)
@@ -67,23 +91,49 @@ public class IntroManager : MonoBehaviour
         }
     }
 
-    private void BuildNewScenePref(bool firstBuild=false)
+    private void BuildNewScenePref(bool firstBuild = false)
     {
         if (firstBuild)
         {
             var distance = width;
             var newScene = Instantiate(scenePrefabStart, startPos.position, Quaternion.identity, transform);
             sceneSegments.Add(newScene);
-            for (var i=0; i< sceneSegmentsToSpawn; i++)
+            for (var i = 0; i < sceneSegmentsToSpawn; i++)
             {
-                var newSegment = Instantiate(scenePrefabStart, startPos.position + new Vector3(0, -distance * (i + 1),0), Quaternion.identity, transform);
+                var newSegment = Instantiate(scenePrefabStart, startPos.position + new Vector3(0, -distance * (i + 1), 0), Quaternion.identity, transform);
                 sceneSegments.Add(newSegment);
             }
         }
         else
         {
-            var newSegment = Instantiate(scenePrefab, sceneSegments[0].transform.position + new Vector3(0, -width * sceneSegments.Count,0), Quaternion.identity, transform);
+            var newSegment = Instantiate(scenePrefab, sceneSegments[0].transform.position + new Vector3(0, -width * sceneSegments.Count, 0), Quaternion.identity, transform);
             sceneSegments.Add(newSegment);
+        }
+    }
+    private void OnDestroy()
+    {
+        // Stop fact sequence when minigame ends
+        if (Information.Instance != null && Information.Instance.IsPlayingSequence())
+        {
+            Information.Instance.StopFactSequence();
+        }
+    }
+    
+    // Public method to manually start facts (can be called from UI or other scripts)
+    public void StartPrecipitationFacts()
+    {
+        if (Information.Instance != null)
+        {
+            Information.Instance.StartFactSequence(WaterCycleStage.Intro);
+        }
+    }
+    
+    // Public method to stop facts
+    public void StopFacts()
+    {
+        if (Information.Instance != null)
+        {
+            Information.Instance.StopFactSequence();
         }
     }
 }

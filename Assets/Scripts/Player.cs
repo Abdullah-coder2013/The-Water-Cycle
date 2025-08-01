@@ -9,11 +9,16 @@ public class Player : MonoBehaviour
     private MiniGame1Manager miniGame1Manager;
     private Animator animator;
     
+    [Header("Audio")] 
+    [SerializeField] private AudioClip hurtSound;
+    private AudioSource playerAudioSource;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         moveAction = InputSystem.actions.FindAction("Move");
+        playerAudioSource = GetComponent<AudioSource>();
         miniGame1Manager = GameObject.Find("PrecipitationGameManager").GetComponent<MiniGame1Manager>();
     }
 
@@ -33,6 +38,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             animator.SetBool("isHurt", true);
+            playerAudioSource.PlayOneShot(hurtSound);
             StartCoroutine(StopHurt());
             if (miniGame1Manager.speed >11f) 
                 miniGame1Manager.speed -= 3f;

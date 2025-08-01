@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MiniGame1Manager : MonoBehaviour
 {
@@ -10,20 +12,60 @@ public class MiniGame1Manager : MonoBehaviour
     public GameObject scenePrefab;
     [SerializeField] private List<GameObject> obstaclePrefab;
     
+    [Header("Information System Integration")]
+    [SerializeField] private bool enableFactDisplay = true;
+    [SerializeField] private float factStartDelay = 2f;
+    
     private List<GameObject> sceneSegments = new List<GameObject>();
 
     private float width = 12.5f;
     private bool initialized = false;
 
     public int sceneSegmentsToSpawn = 4;
+    
+    [Header("Audio")] [SerializeField] private AudioClip rainMusic;
+    [SerializeField] private AudioClip snowMusic;
+    [SerializeField] private AudioClip rainSFX;
+    [SerializeField]private AudioSource musicSource;
+    [SerializeField] private AudioSource rainSFXSource;
+
+    public bool snow = false;
+    
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Init()
     {
+        musicSource.loop = true;
+        if (snow)
+        {
+            musicSource.clip = snowMusic;
+        }
+        else
+        {
+            musicSource.clip = rainMusic;
+            rainSFXSource.loop = true;
+            rainSFXSource.clip = rainSFX;
+            rainSFXSource.Play();
+        }
+        musicSource.Play();
+        
         GetWidth();
         BuildNewScenePref(true);
         StartCoroutine(SpeedIncrease());
         initialized = true;
         
+        // Start displaying precipitation facts
+        if (enableFactDisplay && Information.Instance != null)
+        {
+            StartCoroutine(StartFactsWithDelay());
+        }
+    }
+    
+    private IEnumerator StartFactsWithDelay()
+    {
+        yield return new WaitForSeconds(factStartDelay);
+        Information.Instance.StartFactSequence(WaterCycleStage.Precipitation);
     }
     
     private void GetWidth() 
@@ -110,5 +152,32 @@ public class MiniGame1Manager : MonoBehaviour
             // You can customize the obstacle here if needed
         }
         
+    }
+    
+    private void OnDestroy()
+    {
+        // Stop fact sequence when minigame ends
+        if (Information.Instance != null && Information.Instance.IsPlayingSequence())
+        {
+            Information.Instance.StopFactSequence();
+        }
+    }
+    
+    // Public method to manually start facts (can be called from UI or other scripts)
+    public void StartPrecipitationFacts()
+    {
+        if (Information.Instance != null)
+        {
+            Information.Instance.StartFactSequence(WaterCycleStage.Precipitation);
+        }
+    }
+    
+    // Public method to stop facts
+    public void StopFacts()
+    {
+        if (Information.Instance != null)
+        {
+            Information.Instance.StopFactSequence();
+        }
     }
 }
