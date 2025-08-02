@@ -48,8 +48,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerForestParkour.cs" />
+    <Compile Include="Assets\Scripts\BackgroundGenerator1.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\MiniGameRiver.cs" />
     <Compile Include="Assets\Scripts\MiniGameCity.cs" />
+    <Compile Include="Assets\Scripts\Condensation.cs" />
     <Compile Include="Assets\Scripts\MiniGameSki.cs" />
     <Compile Include="Assets\Scripts\ParkourObstacle.cs" />
     <Compile Include="Assets\Scripts\MiniGameForestManager.cs" />
@@ -57,7 +60,9 @@
     <Compile Include="Assets\Scripts\Ocean.cs" />
     <Compile Include="Assets\Scripts\StageFactsData.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelManager1.cs" />
+    <Compile Include="Assets\Scripts\BackgroundGenerator.cs" />
     <Compile Include="Assets\Scripts\FactData.cs" />
     <Compile Include="Assets\InputSystem_Actions.cs" />
     <Compile Include="Assets\Scripts\PlayerCIty.cs" />

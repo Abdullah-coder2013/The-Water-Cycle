@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ocean : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class Ocean : MonoBehaviour
         {
             StartCoroutine(StartFactsWithDelay());
         }
+        Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
+    }
+    private void OnOnFactSequenceCompleted()
+    {
+        // Handle fact sequence completion if needed
+        SceneManager.LoadScene("Evaporation");
     }
     private IEnumerator StartFactsWithDelay()
     {
