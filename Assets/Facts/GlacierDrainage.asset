@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67cd6817dcb29f468d27d58fdd355ca, type: 3}
+  m_Name: GlacierDrainage
+  m_EditorClassIdentifier: 
+  stage: 2
+  stageName: GlacierDrainage
+  facts:
+  - factText: After snow lands on the glacier, it pretty much stays there for a long,
+      long time.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: A glacier is a massive body of ice that flows slowly over land, shaped
+      by gravity and their own weight.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: It is a significant source of fresh water, holding about 75% of the
+      world's supply.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: They move very slowly, unlike this game, about 25cm per day.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: Because of global warming, and due to temperatures rising, glaciers
+      are starting to melt and sea levels are rising.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: After thousands of years, when the glaciers melt, the raindrop goes
+      peacefully to a river or ocean.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  - factText: And that's where we are now heading.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 3
+  defaultFactDuration: 5
+  timeBetweenFacts: 1

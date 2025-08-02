@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67cd6817dcb29f468d27d58fdd355ca, type: 3}
+  m_Name: CityDrainage
+  m_EditorClassIdentifier: 
+  stage: 2
+  stageName: CityDrainage
+  facts:
+  - factText: In the city, raindrops can fall on surfaces and evaporate directly,
+      but when it falls through a drain and ends up in a sewer, it's a different
+      story.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: In the sewage system, a huge stream of water flows to a nearby filtering
+      facility.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: In the facility, impurities like paper or poop get sorted out as well
+      as small catchable material.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Later, in many stages, the water is fine cleaned and bacteria and germs
+      are also chemically removed.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: The impurites stay in the facility, whereas the fresh water goes in
+      two places.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: So the water can be released into a water body, like a lake, river
+      or an ocean, or it can be stored in a freshwater facility.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  defaultFactDuration: 5
+  timeBetweenFacts: 1

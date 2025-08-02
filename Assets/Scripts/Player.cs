@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +12,11 @@ public class Player : MonoBehaviour
     
     [Header("Audio")] 
     [SerializeField] private AudioClip hurtSound;
+
+    [SerializeField] private AudioClip collectSound;
     private AudioSource playerAudioSource;
+    public int collectednumber = 0;
+    [SerializeField] private TextMeshProUGUI collectednumberText;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +30,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            collectednumberText.text = "Score: " + collectednumber.ToString();
+        }
+        catch
+        {
+            // ignored
+        }
+
         var moveInput = moveAction.ReadValue<Vector2>();
         if (moveInput != Vector2.zero || transform.position.x is < 11f and > -11f)
         {
@@ -37,11 +51,17 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            collectednumber--;
             animator.SetBool("isHurt", true);
             playerAudioSource.PlayOneShot(hurtSound);
             StartCoroutine(StopHurt());
             if (miniGame1Manager.speed >11f) 
                 miniGame1Manager.speed -= 3f;
+        }
+        else if (collision.gameObject.CompareTag("Collectible"))
+        {
+            playerAudioSource.PlayOneShot(collectSound);
+            collectednumber++;
         }
     }
 

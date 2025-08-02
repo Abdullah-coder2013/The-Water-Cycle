@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67cd6817dcb29f468d27d58fdd355ca, type: 3}
+  m_Name: Precipitation
+  m_EditorClassIdentifier: 
+  stage: 1
+  stageName: Precipitation
+  facts:
+  - factText: Onto the first step, precipitation.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Precipitation is the act of water falling down from the sky in many
+      forms.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: That includes rain, hail and snow.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: But it can also come down as fog.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Rain occurs, because the drops in the clouds become to heavy after
+      condensation to stay in the cloud.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Hail forms, when updrafts from thunderstorms carry the rain droplets
+      into cold areas. There, the drops collide with supercooled water and create
+      layers of ice which makes up the hailstone's surface.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Snow forms, when temperatures lower to 0 or negative degrees celcius
+      as the raindroplets form into ice crystals and the crystals collide as they
+      fall to the ground. A seed for snowflakes can be small pieces of debris, like
+      dirt particles or pollen.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Another piece of information that I want to give you before we move
+      on to the next step, is how acid rain forms. As you can see in the game, when
+      rain droplets collide with sulfer dioxide (SO2) and nitrogen oxides (NOx) as
+      well as oxygen, the rain becomes acidic because of a chemical reaction.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: This happens mainly because of artificial substances like the exaust
+      of cars, which make nitrogen oxides, or burning fossil fuel, which creates
+      sulfur dioxide. However, it can also happen because of volcanic eruptions,
+      but it is very rare.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: 'Acid rain isn''t dangerous on impact, but can damage your health in
+      the long term. '
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Ok, enough waiting. Let's head onto the next stage. Drainage.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  defaultFactDuration: 5
+  timeBetweenFacts: 2

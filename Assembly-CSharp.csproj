@@ -48,11 +48,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerForestParkour.cs" />
+    <Compile Include="Assets\Scripts\MiniGameRiver.cs" />
     <Compile Include="Assets\Scripts\MiniGameCity.cs" />
     <Compile Include="Assets\Scripts\MiniGameSki.cs" />
     <Compile Include="Assets\Scripts\ParkourObstacle.cs" />
     <Compile Include="Assets\Scripts\MiniGameForestManager.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\Ocean.cs" />
     <Compile Include="Assets\Scripts\StageFactsData.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\LevelManager1.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Assets\Scripts\PlayerCIty.cs" />
     <Compile Include="Assets\Scripts\MiniGame1Manager.cs" />
     <Compile Include="Assets\Scripts\Information.cs" />
+    <Compile Include="Assets\Scripts\Evaporation.cs" />
     <Compile Include="Assets\Scripts\IntroManager.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

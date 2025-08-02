@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Intro
+  m_EditorClassIdentifier: Assembly-CSharp::StageFactsData
+  stage: 0
+  stageName: Intro
+  facts:
+  - factText: Welcome to the Water Cycle. This game was created for the GMTK Game
+      Jam 2025. Here, you will learn about the water cycle, one of nature's most
+      complex loops.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 2
+  - factText: There will be some information on the side and to guide each step of
+      the cycle, you will get some minigames to play.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 1
+  defaultFactDuration: 5
+  timeBetweenFacts: 1

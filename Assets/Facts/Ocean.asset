@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67cd6817dcb29f468d27d58fdd355ca, type: 3}
+  m_Name: Ocean
+  m_EditorClassIdentifier: 
+  stage: 4
+  stageName: Ocean
+  facts:
+  - factText: We are now in the Ocean. The third last step before the loop starts
+      again.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 0
+    delayBeforeShow: 0
+  - factText: In the ocean, a quite few waterdrops head straight into the next step,
+      evaporation.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: But we are going to pause for a while.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: The Earth is 72% covered by ocean,
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: but only 2% of that is freshwater and drinkable. Everything else is
+      saltwater.
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: Now, what are we waiting for, to the next game! EVAPORATION!
+    narrationClip: {fileID: 0}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  defaultFactDuration: 5
+  timeBetweenFacts: 1
