@@ -15,18 +15,39 @@ MonoBehaviour:
   stage: 0
   stageName: Intro
   facts:
-  - factText: Welcome to the Water Cycle. This game was created for the GMTK Game
-      Jam 2025. Here, you will learn about the water cycle, one of nature's most
-      complex loops.
-    narrationClip: {fileID: 0}
+  - factText: "Water never stops moving. From clouds to rivers, oceans to ice, and
+      back again\u2014this endless cycle is nature\u2019s ultimate loop."
+    narrationClip: {fileID: 8300000, guid: 800abd429e1907445b3af2b9bf4d2790, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: There will be some information on the side and to guide each step of
-      the cycle, you will get some minigames to play.
-    narrationClip: {fileID: 0}
+  - factText: "In The Water Cycle, you'll journey through six stages of the water
+      cycle, each one brought to life with narration, educational facts, and fun
+      interactive minigames. As you move through precipitation, drainage, rivers,
+      and beyond, you'll learn how water travels the planet\u2014and how it's all
+      connected."
+    narrationClip: {fileID: 8300000, guid: d84e004c571c2df4ebf77a81456e4e72, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
+    delayBeforeShow: 0
+  - factText: "At each stage, you'll:\r\n\r\n    - Play a minigame themed around
+      that part of the cycle\r\n\r\n    - Learn real-world facts narrated or displayed
+      in a fun, accessible way\r\n\r\n    - Advance automatically to the next stage,
+      watching the loop unfold in motion"
+    narrationClip: {fileID: 8300000, guid: e33c4c8d3d3d0fd4e9274b89626234f0, type: 3}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: "The loop never ends\u2014just like the water cycle."
+    narrationClip: {fileID: 8300000, guid: 1b48c781ef44d214792b0b9476032921, type: 3}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
+  - factText: "Ready to begin your journey? Let's dive into the first stage: Precipitation.
+      \U0001F327"
+    narrationClip: {fileID: 8300000, guid: 13862ed26c4321f4faceb99a7c17d589, type: 3}
+    displayDuration: 0
+    waitForAudio: 1
+    delayBeforeShow: 0
   defaultFactDuration: 5
   timeBetweenFacts: 1

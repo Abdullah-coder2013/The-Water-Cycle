@@ -15,35 +15,25 @@ MonoBehaviour:
   stage: 2
   stageName: ForestDrainage
   facts:
-  - factText: After a hail droplet falls from the sky and lands somewhere, it starts
-      to melt very fast.
-    narrationClip: {fileID: 0}
+  - factText: In natural areas, some water seeps into the soil and slowly travels
+      through dirt, rock, and underground spaces.
+    narrationClip: {fileID: 8300000, guid: ee1b7c35aacb5734cae548371df8603b, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: After it melts, in a forest, the droplet infiltrates and percolates
-      into the soil. It navigates through the soil and down bedrock.
-    narrationClip: {fileID: 0}
+  - factText: This groundwater can flow through caves or collect in underground reservoirs
+      called aquifers.
+    narrationClip: {fileID: 8300000, guid: e00ae4ec281d1e44786ab2b864fdffb1, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Percolation can end up in two ways. In the first layer of the ground,
-      colored green, it can be picked up from plant roots and can be sent back to
-      the clouds through transpiration, or it can navigate through the other layers.
-    narrationClip: {fileID: 0}
+  - factText: Later, it may emerge from springs or feed rivers and wetlands.
+    narrationClip: {fileID: 8300000, guid: a73b10bfb161cbe429f152292a17316c, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: After the droplet travels through the ground into dripstone caves,
-      (Which can take millions of years by the way) the water then can be frozen
-      because of the temperature, or it can be deposited into rivers or oceans.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: After you are finished with this parkour, we will head straight to
-      the river, where the million year old water droplet ends up.
-    narrationClip: {fileID: 0}
+  - factText: "Water finds its way\u2014now flowing toward the next stage: River."
+    narrationClip: {fileID: 8300000, guid: 7e5eba0becef8aa429538ca2ffdc452c, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

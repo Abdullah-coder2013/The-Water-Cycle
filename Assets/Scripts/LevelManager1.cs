@@ -18,7 +18,25 @@ public class LevelManager1 : MonoBehaviour
 
     private void Start()
     {
-        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+        Debug.Log("[LevelManager1] Start called - looking for LevelLoader");
+        var levelLoaderGO = GameObject.Find("LevelLoader");
+        if (levelLoaderGO == null)
+        {
+            Debug.LogError("[LevelManager1] Could not find LevelLoader GameObject!");
+        }
+        else
+        {
+            levelLoader = levelLoaderGO.GetComponent<LevelLoader>();
+            if (levelLoader == null)
+            {
+                Debug.LogError("[LevelManager1] LevelLoader GameObject found but no LevelLoader component!");
+            }
+            else
+            {
+                Debug.Log("[LevelManager1] LevelLoader found and assigned successfully");
+            }
+        }
+        
         miniGame1Manager = GameObject.Find("PrecipitationGameManager").GetComponent<MiniGame1Manager>();
         Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
     }
@@ -26,6 +44,12 @@ public class LevelManager1 : MonoBehaviour
     private void OnOnFactSequenceCompleted()
     {
         Debug.Log($"[LevelManager1] OnFactSequenceCompleted triggered. Current scene: {SceneManager.GetActiveScene().name}, PrecipitationType: {precipitationType}");
+        
+        if (levelLoader == null)
+        {
+            Debug.LogError("[LevelManager1] levelLoader is null when trying to load scene!");
+            return;
+        }
         
         if (precipitationType == PrecipitationType.Rain)
         {

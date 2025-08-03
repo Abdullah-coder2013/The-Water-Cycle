@@ -15,45 +15,35 @@ MonoBehaviour:
   stage: 2
   stageName: GlacierDrainage
   facts:
-  - factText: After snow lands on the glacier, it pretty much stays there for a long,
-      long time.
-    narrationClip: {fileID: 0}
+  - factText: "In cold environments, snow can build up and compact into glaciers\u2014massive,
+      slow-moving rivers of ice. "
+    narrationClip: {fileID: 8300000, guid: 4c699d40ff353d34db31ddb3e1d99b1e, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: A glacier is a massive body of ice that flows slowly over land, shaped
-      by gravity and their own weight.
-    narrationClip: {fileID: 0}
+    delayBeforeShow: 0
+  - factText: Glaciers can store freshwater for hundreds or even thousands of years,
+      releasing it slowly through meltwater streams that feed into rivers.
+    narrationClip: {fileID: 8300000, guid: 2b4458f9521f7ef4a80a316483f4da34, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: It is a significant source of fresh water, holding about 75% of the
-      world's supply.
-    narrationClip: {fileID: 0}
+    delayBeforeShow: 0
+  - factText: However, climate change is causing glaciers around the world to melt
+      faster than ever before, shrinking their size and releasing large amounts of
+      water too quickly.
+    narrationClip: {fileID: 8300000, guid: e75641fcbfc2f6b4ebb642d6a2d5f2df, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: They move very slowly, unlike this game, about 25cm per day.
-    narrationClip: {fileID: 0}
+    delayBeforeShow: 0
+  - factText: This can lead to rising sea levels and disrupt freshwater supplies
+      for people and ecosystems that rely on glacial melt.
+    narrationClip: {fileID: 8300000, guid: 9b90fb23209bf744381bb5ca52781df5, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: Because of global warming, and due to temperatures rising, glaciers
-      are starting to melt and sea levels are rising.
-    narrationClip: {fileID: 0}
+    delayBeforeShow: 0
+  - factText: "Water finds its way\u2014now flowing toward the next stage: River."
+    narrationClip: {fileID: 8300000, guid: b18715cee2ef3794ab42c8846b1fff10, type: 3}
     displayDuration: 0
     waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: After thousands of years, when the glaciers melt, the raindrop goes
-      peacefully to a river or ocean.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 3
-  - factText: And that's where we are now heading.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 3
+    delayBeforeShow: 0
   defaultFactDuration: 5
   timeBetweenFacts: 1

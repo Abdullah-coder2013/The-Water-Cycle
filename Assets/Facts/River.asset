@@ -15,45 +15,27 @@ MonoBehaviour:
   stage: 3
   stageName: River
   facts:
-  - factText: This step is where all the other steps collide.
-    narrationClip: {fileID: 0}
+  - factText: Rivers collect water from rainfall, snowmelt, springs, and glacier
+      melt, carrying it from higher elevations to lower ones, eventually reaching
+      lakes, seas, or oceans.
+    narrationClip: {fileID: 8300000, guid: b655710b6da7db641b49d18dfaaae9bd, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: The river.
-    narrationClip: {fileID: 0}
+  - factText: Rivers shape the land over time through erosion and support life all
+      along their paths.
+    narrationClip: {fileID: 8300000, guid: 7bb82257abb5a8b42a1ca58181f25e92, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: The glaciers melt into rivers (or better said, form into rivers), the
-      water from the sewage pipes are released into water bodies, and water often
-      drips from caves to these rivers if there is an opening.
-    narrationClip: {fileID: 0}
+  - factText: They are essential for ecosystems, drinking water, agriculture, and
+      transportation.
+    narrationClip: {fileID: 8300000, guid: 47516dc329458684fb08cd673da469e4, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: All rivers head somewhere. It is a stream of water connecting two bodies.
-      For example, the Nile river starts at Lake Viktoria and ends in the Mediterranean
-      Sea.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: The longest river in the world is the Nile. It is over 30 Million years
-      old.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: It played a crucial role for the ancient Egyptians who lived there
-      on the riverbed.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: And this river is now heading towards the ocean. Let's see what happens
-      next.
-    narrationClip: {fileID: 0}
+  - factText: "The current keeps moving\u2014time for the next stage: Ocean."
+    narrationClip: {fileID: 8300000, guid: 92e33a258a16d4140a2f2bbaec03156b, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

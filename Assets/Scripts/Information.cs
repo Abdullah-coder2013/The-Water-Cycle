@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using UnityEngine.Audio;
 
 // Enum for different water cycle stages
 public enum WaterCycleStage
@@ -31,6 +32,7 @@ public class Information : MonoBehaviour
     
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioMixerGroup narrationAudioGroup;
     
     [Header("Stage Facts Data")]
     [SerializeField] private List<StageFactsData> stageFactsData = new List<StageFactsData>();
@@ -98,6 +100,7 @@ public class Information : MonoBehaviour
             {
                 audioSource = gameObject.AddComponent<AudioSource>();
             }
+            audioSource.outputAudioMixerGroup = narrationAudioGroup;
         }
         
         // Initialize UI components if not assigned
@@ -125,8 +128,11 @@ public class Information : MonoBehaviour
     /// <param name="stage">The water cycle stage to display facts for</param>
     public void StartFactSequence(WaterCycleStage stage)
     {
+        Debug.Log($"[Information] StartFactSequence called for stage: {stage}");
+        
         if (isPlayingSequence)
         {
+            Debug.Log("[Information] Already playing sequence, stopping current one");
             StopFactSequence();
         }
         
@@ -141,13 +147,23 @@ public class Information : MonoBehaviour
             return;
         }
         
+        Debug.Log($"[Information] Found {currentStageData.facts.Count} facts for stage {stage}");
         currentFactIndex = 0;
         isPlayingSequence = true;
         
-        OnStageChanged?.Invoke(stage);
-        OnFactSequenceStarted?.Invoke();
+        try
+        {
+            OnStageChanged?.Invoke(stage);
+            OnFactSequenceStarted?.Invoke();
+            Debug.Log("[Information] Stage events invoked successfully");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[Information] Exception during stage event invocation: {e.Message}");
+        }
         
         factSequenceCoroutine = StartCoroutine(PlayFactSequence());
+        Debug.Log("[Information] Fact sequence coroutine started");
     }
     
     /// <summary>
@@ -405,8 +421,25 @@ public class Information : MonoBehaviour
         factSequenceCoroutine = null;
         
         HideFactPanel();
-        Debug.Log("[Information] Invoking OnFactSequenceCompleted event");
-        OnFactSequenceCompleted?.Invoke();
+        
+        Debug.Log("[Information] About to invoke OnFactSequenceCompleted event");
+        try
+        {
+            if (OnFactSequenceCompleted != null)
+            {
+                Debug.Log($"[Information] OnFactSequenceCompleted has {OnFactSequenceCompleted.GetInvocationList().Length} subscribers");
+                OnFactSequenceCompleted.Invoke();
+                Debug.Log("[Information] OnFactSequenceCompleted event invoked successfully");
+            }
+            else
+            {
+                Debug.Log("[Information] OnFactSequenceCompleted event is null - no subscribers");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[Information] Exception during OnFactSequenceCompleted event: {e.Message}\nStackTrace: {e.StackTrace}");
+        }
     }
     
     #endregion

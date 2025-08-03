@@ -24,6 +24,8 @@ public class IntroManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip rainMusic;
     [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource buttonClickSource;
+    [SerializeField] private AudioClip buttonClickClip;
 
     private LevelLoader levelLoader;
 
@@ -32,7 +34,25 @@ public class IntroManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+        Debug.Log("[IntroManager] Start called - looking for LevelLoader");
+        var levelLoaderGO = GameObject.Find("LevelLoader");
+        if (levelLoaderGO == null)
+        {
+            Debug.LogError("[IntroManager] Could not find LevelLoader GameObject!");
+        }
+        else
+        {
+            levelLoader = levelLoaderGO.GetComponent<LevelLoader>();
+            if (levelLoader == null)
+            {
+                Debug.LogError("[IntroManager] LevelLoader GameObject found but no LevelLoader component!");
+            }
+            else
+            {
+                Debug.Log("[IntroManager] LevelLoader found and assigned successfully");
+            }
+        }
+        
         musicSource.clip = rainMusic;
         musicSource.loop = true;
         musicSource.Play();
@@ -41,9 +61,30 @@ public class IntroManager : MonoBehaviour
         
         Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
     }
+    
+    public void PlayButtonClickSound()
+    {
+        if (buttonClickSource != null && buttonClickClip != null)
+        {
+            buttonClickSource.pitch = Random.Range(0.8f, 1.2f); // Randomize pitch for variety
+            buttonClickSource.PlayOneShot(buttonClickClip);
+        }
+        else
+        {
+            Debug.LogWarning("[IntroManager] Button click sound not set up properly.");
+        }
+    }
 
-    private void OnOnFactSequenceCompleted() {
+    private void OnOnFactSequenceCompleted()
+    {
+        Debug.Log("[IntroManager] OnFactSequenceCompleted called");
         // Handle fact sequence completion if needed
+        if (levelLoader == null)
+        {
+            Debug.LogError("[IntroManager] levelLoader is null when trying to load Precipitation scene!");
+            return;
+        }
+        Debug.Log("[IntroManager] Loading Precipitation scene via LevelLoader");
         levelLoader.LoadLevel("Precipitation");
     }
 

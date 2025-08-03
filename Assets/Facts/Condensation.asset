@@ -15,91 +15,30 @@ MonoBehaviour:
   stage: 6
   stageName: Condensation
   facts:
-  - factText: 'This is the last step before we start again. '
-    narrationClip: {fileID: 0}
+  - factText: As water vapor rises into the atmosphere, it cools and condenses into
+      tiny water droplets.
+    narrationClip: {fileID: 8300000, guid: 47276a08ce1b2404e9d4cdcf8d1eaeea, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: The water molecule rises so high, that it collides with the other molecules
-      to build clouds.
-    narrationClip: {fileID: 0}
+  - factText: These droplets group together to form clouds or fog.
+    narrationClip: {fileID: 8300000, guid: 235d51e58db5bff4eb43c97481fb2c3e, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: These clouds then stay in the sky until their water mollecules collide
-      so much and and get so heavy, that they cannot float anymore.
-    narrationClip: {fileID: 0}
+  - factText: Condensation is the reverse of evaporation.
+    narrationClip: {fileID: 8300000, guid: c96eae4b61ae1524fbc54c4e0dee4a4e, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: 'This is the end of the cycle. This whole thing starts again. '
-    narrationClip: {fileID: 0}
+  - factText: "Once enough droplets gather and become heavy, they fall back to Earth
+      as precipitation\u2014restarting the cycle again."
+    narrationClip: {fileID: 8300000, guid: 4a4fb331920acb541b2394cb5a8c892b, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: From Precipitation,
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: To Drainage,
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: To the River,
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: To the Ocean
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Then Evaporation,
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: To finally, Condensation.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: This loop has been going on for millions of years.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: All of the water in this earth is all it has ever been.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: If you think about it, we don't have new sources of water coming to
-      earth.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Now,
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: It's time.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: 'for Step 1: Precipitation once again!'
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: An infinite LOOP
-    narrationClip: {fileID: 0}
+  - factText: "And just like that, the loop continues\u2014back to Precipitation!"
+    narrationClip: {fileID: 8300000, guid: 642171cf148c83d478130b30463c5b02, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

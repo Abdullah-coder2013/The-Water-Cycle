@@ -15,36 +15,31 @@ MonoBehaviour:
   stage: 5
   stageName: Evaporation
   facts:
-  - factText: Evaporation is when the water on the surface of a water body gets vaporised
-      by the sun and rises in a gas form.
-    narrationClip: {fileID: 0}
+  - factText: When the sun heats water in oceans, lakes, rivers, and even puddles,
+      it turns into invisible gas called water vapor.
+    narrationClip: {fileID: 8300000, guid: 00a5c8679f33cde4dbf6db8afcdde60c, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: These water molecules float very high until they reach a cold point.
-    narrationClip: {fileID: 0}
+  - factText: This process is called evaporation.
+    narrationClip: {fileID: 8300000, guid: ec0bfb485c9a31f4196d7263f25e46c2, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: 'At the cold point, the next step starts to happen: Condensation'
-    narrationClip: {fileID: 0}
+  - factText: Plants also contribute through transpiration, where they release water
+      vapor through small openings in their leaves.
+    narrationClip: {fileID: 8300000, guid: 8e42246a498f4e74ab4cf5b33f450a74, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Before we get to the final point, I want to share another piece of
-      information.
-    narrationClip: {fileID: 0}
+  - factText: Together, evaporation and transpiration move large amounts of water
+      from Earth's surface into the sky.
+    narrationClip: {fileID: 8300000, guid: ba1aa87212222024caf205355a8abbc6, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: If the water molecule collides with SO2 or NOx, the chemicals for acid
-      rain, it becomes acidic.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Now, onto the last step, Condensation.
-    narrationClip: {fileID: 0}
+  - factText: "Rising into the sky\u2014prepare for the next stage: Condensation."
+    narrationClip: {fileID: 8300000, guid: 486fc500b17d336408ecb5059a319f1f, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

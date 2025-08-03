@@ -144,27 +144,6 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Frame_1
-    originalName: 
-    pivot: {x: 0.53333336, y: -0.17391305}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 35
-      width: 30
-      height: 23
-    spriteID: e3ed5296784a0b94786188e298f07410
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 35}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -179,7 +158,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: Dam
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -188,15 +167,6 @@ ScriptedImporter:
         width: 30
         height: 23
       spriteId: 20d5a6ade3b98114f8880e5188237a74
-    - name: Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 4
-        width: 30
-        height: 23
-      spriteId: e3ed5296784a0b94786188e298f07410
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -216,4 +186,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 64, y: 64}
+  previousTextureSize: {x: 64, y: 32}

@@ -15,40 +15,25 @@ MonoBehaviour:
   stage: 2
   stageName: CityDrainage
   facts:
-  - factText: In the city, raindrops can fall on surfaces and evaporate directly,
-      but when it falls through a drain and ends up in a sewer, it's a different
-      story.
-    narrationClip: {fileID: 0}
+  - factText: 'In cities and towns, rainwater often flows over roads and rooftops
+      into storm drains and sewer systems. '
+    narrationClip: {fileID: 8300000, guid: c923a9a6239fc03448241a240d849f4d, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: In the sewage system, a huge stream of water flows to a nearby filtering
-      facility.
-    narrationClip: {fileID: 0}
+  - factText: These pipes prevent flooding and can lead to treatment plants or nearby
+      rivers and oceans.
+    narrationClip: {fileID: 8300000, guid: 36ada79f7ac5024439bafe73a539a4fe, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: In the facility, impurities like paper or poop get sorted out as well
-      as small catchable material.
-    narrationClip: {fileID: 0}
+  - factText: However, urban runoff can carry pollutants with it.
+    narrationClip: {fileID: 8300000, guid: 7d9f5aba6651679449311d9879770d38, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Later, in many stages, the water is fine cleaned and bacteria and germs
-      are also chemically removed.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: The impurites stay in the facility, whereas the fresh water goes in
-      two places.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: So the water can be released into a water body, like a lake, river
-      or an ocean, or it can be stored in a freshwater facility.
-    narrationClip: {fileID: 0}
+  - factText: "Water finds its way\u2014now flowing toward the next stage: River."
+    narrationClip: {fileID: 8300000, guid: 2245e542265232f4e86d685e4ab4b5d4, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

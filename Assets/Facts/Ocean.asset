@@ -15,36 +15,30 @@ MonoBehaviour:
   stage: 4
   stageName: Ocean
   facts:
-  - factText: We are now in the Ocean. The third last step before the loop starts
-      again.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 0
-    delayBeforeShow: 0
-  - factText: In the ocean, a quite few waterdrops head straight into the next step,
-      evaporation.
-    narrationClip: {fileID: 0}
+  - factText: Oceans hold about 97% of all water on Earth, mostly as saltwater.
+    narrationClip: {fileID: 8300000, guid: 4c61fb61d51201149a65eb96bc59309d, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: But we are going to pause for a while.
-    narrationClip: {fileID: 0}
+  - factText: They are the largest water storage areas in the cycle and are crucial
+      for regulating Earth's climate.
+    narrationClip: {fileID: 8300000, guid: 31163f6bdd48ed14c9e378857046f85a, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: The Earth is 72% covered by ocean,
-    narrationClip: {fileID: 0}
+  - factText: Heat from the sun causes ocean water to evaporate and enter the atmosphere.
+    narrationClip: {fileID: 8300000, guid: 6997e09a655f5184c8e221a077991903, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: but only 2% of that is freshwater and drinkable. Everything else is
-      saltwater.
-    narrationClip: {fileID: 0}
+  - factText: Ocean currents also move warm and cold water across the globe, influencing
+      weather patterns and temperatures.
+    narrationClip: {fileID: 8300000, guid: a4b29c65270dff143ab33e18a3074de2, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Now, what are we waiting for, to the next game! EVAPORATION!
-    narrationClip: {fileID: 0}
+  - factText: "The sun calls the ocean\u2014next up: Evaporation."
+    narrationClip: {fileID: 8300000, guid: 72bc7c59ad375044ab4f20ab6946916d, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0

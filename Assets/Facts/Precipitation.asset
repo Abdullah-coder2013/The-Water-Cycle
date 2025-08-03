@@ -15,72 +15,40 @@ MonoBehaviour:
   stage: 1
   stageName: Precipitation
   facts:
-  - factText: Onto the first step, precipitation.
-    narrationClip: {fileID: 0}
+  - factText: Precipitation happens when water droplets in clouds become too heavy
+      to stay in the air and fall to the ground.
+    narrationClip: {fileID: 8300000, guid: d7ba8610bb456fe42b346e6f42744450, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Precipitation is the act of water falling down from the sky in many
-      forms.
-    narrationClip: {fileID: 0}
+  - factText: It can fall as rain, snow, sleet, or hail, depending on the temperature
+      in the atmosphere.
+    narrationClip: {fileID: 8300000, guid: 5ce318105f42b674aa05e9a90ce43b46, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: That includes rain, hail and snow.
-    narrationClip: {fileID: 0}
+  - factText: Snow forms when water vapor freezes directly into ice crystals inside
+      cold clouds.
+    narrationClip: {fileID: 8300000, guid: 01edd2391a76fb8409f5c4241f090d79, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: But it can also come down as fog.
-    narrationClip: {fileID: 0}
+  - factText: Hail forms during strong thunderstorms, where updrafts carry water
+      droplets high into freezing air, adding layers of ice before falling to the
+      ground.
+    narrationClip: {fileID: 8300000, guid: 5275b896cdfdfa64b96b37feb22e11af, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Rain occurs, because the drops in the clouds become to heavy after
-      condensation to stay in the cloud.
-    narrationClip: {fileID: 0}
+  - factText: "Sometimes, air pollution mixes with precipitation, creating acid rain\u2014a
+      more acidic form of rainfall that can damage forests, lakes, soil, and even
+      buildings."
+    narrationClip: {fileID: 8300000, guid: c98610e2267cb404f8f90034d71d548a, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
-  - factText: Hail forms, when updrafts from thunderstorms carry the rain droplets
-      into cold areas. There, the drops collide with supercooled water and create
-      layers of ice which makes up the hailstone's surface.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Snow forms, when temperatures lower to 0 or negative degrees celcius
-      as the raindroplets form into ice crystals and the crystals collide as they
-      fall to the ground. A seed for snowflakes can be small pieces of debris, like
-      dirt particles or pollen.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Another piece of information that I want to give you before we move
-      on to the next step, is how acid rain forms. As you can see in the game, when
-      rain droplets collide with sulfer dioxide (SO2) and nitrogen oxides (NOx) as
-      well as oxygen, the rain becomes acidic because of a chemical reaction.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: This happens mainly because of artificial substances like the exaust
-      of cars, which make nitrogen oxides, or burning fossil fuel, which creates
-      sulfur dioxide. However, it can also happen because of volcanic eruptions,
-      but it is very rare.
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: 'Acid rain isn''t dangerous on impact, but can damage your health in
-      the long term. '
-    narrationClip: {fileID: 0}
-    displayDuration: 0
-    waitForAudio: 1
-    delayBeforeShow: 0
-  - factText: Ok, enough waiting. Let's head onto the next stage. Drainage.
-    narrationClip: {fileID: 0}
+  - factText: "From the sky to the surface\u2014onto the next stage: Drainage."
+    narrationClip: {fileID: 8300000, guid: 250774a4cbb73b240b340e1db0409a72, type: 3}
     displayDuration: 0
     waitForAudio: 1
     delayBeforeShow: 0
