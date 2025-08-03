@@ -26,9 +26,11 @@ public class MiniGameSki : MonoBehaviour
 
     private float width = 12.5f;
     private bool initialized = false;
+    private LevelLoader levelLoader;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         if (Information.Instance != null)
         {
             Information.OnFactSequenceCompleted += InformationOnOnFactSequenceCompleted;
@@ -48,7 +50,7 @@ public class MiniGameSki : MonoBehaviour
     private void InformationOnOnFactSequenceCompleted()
     {
         // Handle fact sequence completion if needed
-        SceneManager.LoadScene("River");
+        levelLoader.LoadLevel("River");
     }
 
     private IEnumerator StartFactsWithDelay()

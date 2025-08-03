@@ -24,9 +24,12 @@ public class Condensation : MonoBehaviour
 
     private float width = 12.5f;
     private bool initialized = false;
+    private bool factsCompleted = false; // New flag
+    private LevelLoader levelLoader;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         GetWidth();
         BuildNewScenePref(true);
         musicSource.clip = rainMusic;
@@ -42,7 +45,13 @@ public class Condensation : MonoBehaviour
     private void OnOnFactSequenceCompleted()
     {
         // Handle fact sequence completion if needed
-        SceneManager.LoadScene("Intro");
+        factsCompleted = true; // Set the flag to true when facts are completed
+        if (levelLoader != null)
+        {
+            levelLoader.LoadLevel("Intro");
+        }
+    
+        //SceneManager.LoadScene("Evaporation");
     }
     private IEnumerator StartFactsWithDelay()
     {
@@ -81,6 +90,10 @@ public class Condensation : MonoBehaviour
 
     private void Update()
     {
+        // Add logic to check for finish collider and factsCompleted flag
+        // For now, assuming a finish condition will be added elsewhere or is implicit
+        // Example: if (factsCompleted && playerReachedFinish) { SceneManager.LoadScene("NextScene"); }
+
         foreach (var segment in sceneSegments)
         {
             segment.transform.position += Vector3.down * speed * Time.deltaTime;

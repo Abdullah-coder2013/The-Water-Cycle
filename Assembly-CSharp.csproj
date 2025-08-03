@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\FactData.cs" />
     <Compile Include="Assets\InputSystem_Actions.cs" />
     <Compile Include="Assets\Scripts\PlayerCIty.cs" />
+    <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\MiniGame1Manager.cs" />
     <Compile Include="Assets\Scripts\Information.cs" />
     <Compile Include="Assets\Scripts\Evaporation.cs" />

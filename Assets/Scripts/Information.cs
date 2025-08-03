@@ -57,15 +57,34 @@ public class Information : MonoBehaviour
     
     private void Awake()
     {
-        // Singleton pattern
+        Debug.Log($"[Information] Awake called in scene: {UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}");
+        // Scene-specific singleton pattern - each scene gets its own Information instance
         if (Instance == null)
         {
+            Debug.Log("[Information] Creating new scene-specific instance");
             Instance = this;
             InitializeComponents();
         }
         else
         {
+            Debug.Log("[Information] Destroying duplicate instance in same scene");
             Destroy(gameObject);
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        Debug.Log($"[Information] OnDestroy called in scene: {UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}");
+        // Clear singleton reference when this scene's instance is destroyed
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+        
+        // Stop any running coroutines
+        if (factSequenceCoroutine != null)
+        {
+            StopCoroutine(factSequenceCoroutine);
         }
     }
     
@@ -116,7 +135,9 @@ public class Information : MonoBehaviour
         
         if (currentStageData == null || currentStageData.facts.Count == 0)
         {
-            Debug.LogWarning($"No facts data found for stage: {stage}");
+            Debug.LogWarning($"No facts data found for stage: {stage}. Available stages: {string.Join(", ", stageFactsData.ConvertAll(data => data.stage.ToString()))}");
+            // Complete immediately if no facts data
+            CompleteFactSequence();
             return;
         }
         
@@ -354,9 +375,15 @@ public class Information : MonoBehaviour
     
     private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float startAlpha, float endAlpha, float duration, Action onComplete = null)
     {
+        if (canvasGroup == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
+        
         float elapsedTime = 0f;
         
-        while (elapsedTime < duration)
+        while (elapsedTime < duration && canvasGroup != null)
         {
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
@@ -364,16 +391,21 @@ public class Information : MonoBehaviour
             yield return null;
         }
         
-        canvasGroup.alpha = endAlpha;
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = endAlpha;
+        }
         onComplete?.Invoke();
     }
     
     private void CompleteFactSequence()
     {
+        Debug.Log($"[Information] CompleteFactSequence called. Current stage: {currentStage}, Current scene: {UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}");
         isPlayingSequence = false;
         factSequenceCoroutine = null;
         
         HideFactPanel();
+        Debug.Log("[Information] Invoking OnFactSequenceCompleted event");
         OnFactSequenceCompleted?.Invoke();
     }
     

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1917c9dd7c30b72468491e7a65887b1c
+guid: 3d120b24131d23e4491a9a166f81fe7b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Button
+  - name: LevelSelect
     originalName: 
-    pivot: {x: 0.5, y: -0.3}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 30
-      height: 10
-    spriteID: baf732ff6480d26489ccc1c401a4bd7c
+      width: 96
+      height: 96
+    spriteID: 0af59a85dbb1a8542b876b1827b43c51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,25 +148,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1993771182
+      value0: 3894999460
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Button
+    name: LevelSelect
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Button
+    - name: LevelSelect
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: 3
-        width: 30
-        height: 10
-      spriteId: baf732ff6480d26489ccc1c401a4bd7c
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 0af59a85dbb1a8542b876b1827b43c51
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -185,5 +185,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 16}
-  previousTextureSize: {x: 64, y: 32}
+  canvasSize: {x: 96, y: 96}
+  previousTextureSize: {x: 128, y: 128}

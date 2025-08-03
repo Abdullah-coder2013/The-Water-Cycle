@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class IntroManager : MonoBehaviour
 {
     public Transform startPos;
-    private InputAction startAction;
     [SerializeField] private Transform endPos;
     public float speed = 5f;
     public GameObject scenePrefabStart;
@@ -22,13 +21,22 @@ public class IntroManager : MonoBehaviour
     private List<GameObject> sceneSegments = new List<GameObject>();
     public int sceneSegmentsToSpawn = 4; // Number of segments to spawn initially
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip rainMusic;
+    [SerializeField] private AudioSource musicSource;
+
+    private LevelLoader levelLoader;
+
     private float width = 12.5f;
     private bool initialized = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+        musicSource.clip = rainMusic;
+        musicSource.loop = true;
+        musicSource.Play();
         GetWidth();
-        startAction = InputSystem.actions.FindAction("Start");
         BuildNewScenePref(true);
         
         Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
@@ -36,7 +44,7 @@ public class IntroManager : MonoBehaviour
 
     private void OnOnFactSequenceCompleted() {
         // Handle fact sequence completion if needed
-        SceneManager.LoadScene("Precipitation");
+        levelLoader.LoadLevel("Precipitation");
     }
 
     private IEnumerator StartFactsWithDelay()
@@ -65,18 +73,20 @@ public class IntroManager : MonoBehaviour
         }
     }
 
+    public void StartGame()
+    {
+        initialized = true;
+        startMenu.SetActive(false);
+        // Start displaying precipitation facts
+        if (enableFactDisplay && Information.Instance != null)
+        {
+            StartCoroutine(StartFactsWithDelay());
+        }
+    }
+
     private void Update()
     {
-        if (startAction.triggered)
-        {
-            initialized = true;
-            startMenu.SetActive(false);
-            // Start displaying precipitation facts
-            if (enableFactDisplay && Information.Instance != null)
-            {
-                StartCoroutine(StartFactsWithDelay());
-            }
-        }
+
         if (!initialized) return; // Ensure the game is initialized before updating
         foreach (var segment in sceneSegments)
         {

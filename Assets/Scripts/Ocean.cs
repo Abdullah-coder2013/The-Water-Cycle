@@ -12,9 +12,12 @@ public class Ocean : MonoBehaviour
     [SerializeField] private AudioClip oceanMusic;
     [SerializeField] private AudioSource musicSource;
 
+    private LevelLoader levelLoader;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         musicSource.clip = oceanMusic;
         musicSource.loop = true;
         musicSource.Play();
@@ -27,7 +30,7 @@ public class Ocean : MonoBehaviour
     private void OnOnFactSequenceCompleted()
     {
         // Handle fact sequence completion if needed
-        SceneManager.LoadScene("Evaporation");
+        levelLoader.LoadLevel("Evaporation");
     }
     private IEnumerator StartFactsWithDelay()
     {

@@ -13,26 +13,41 @@ public class LevelManager1 : MonoBehaviour
     [SerializeField] private GameObject hailBackground;
     private MiniGame1Manager miniGame1Manager;
 
+    [SerializeField] private Canvas canvas;
+    private LevelLoader levelLoader;
+
     private void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         miniGame1Manager = GameObject.Find("PrecipitationGameManager").GetComponent<MiniGame1Manager>();
         Information.OnFactSequenceCompleted += OnOnFactSequenceCompleted;
     }
     
     private void OnOnFactSequenceCompleted()
     {
+        Debug.Log($"[LevelManager1] OnFactSequenceCompleted triggered. Current scene: {SceneManager.GetActiveScene().name}, PrecipitationType: {precipitationType}");
+        
         if (precipitationType == PrecipitationType.Rain)
         {
-            SceneManager.LoadScene("CitySewage");
+            Debug.Log("[LevelManager1] Loading CitySewage scene");
+            levelLoader.LoadLevel("CitySewage");
         }
         else if (precipitationType == PrecipitationType.Snow)
         {
-            SceneManager.LoadScene("GlacierSkiing");
+            Debug.Log("[LevelManager1] Loading GlacierSkiing scene");
+            levelLoader.LoadLevel("GlacierSkiing");
         }
         else if (precipitationType == PrecipitationType.Hail)
         {
-            SceneManager.LoadScene("DrainageForest");
+            Debug.Log("[LevelManager1] Loading DrainageForest scene");
+            levelLoader.LoadLevel("DrainageForest");
         }
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("[LevelManager1] OnDestroy called - unsubscribing from events");
+        Information.OnFactSequenceCompleted -= OnOnFactSequenceCompleted;
     }
 
     public void Rain()
@@ -70,6 +85,18 @@ public class LevelManager1 : MonoBehaviour
             Instantiate(hailPlayer, miniGame1Manager.startPos.position, Quaternion.identity);
         }
         miniGame1Manager.Init();
+    }
+
+    private void Update()
+    {
+        if (levelLoader != null && levelLoader.IsTransitioning())
+        {
+            canvas.enabled = false; // Disable the canvas during the transition
+        }
+        else
+        {
+            canvas.enabled = true; // Enable the canvas when not transitioning
+        }
     }
 
 

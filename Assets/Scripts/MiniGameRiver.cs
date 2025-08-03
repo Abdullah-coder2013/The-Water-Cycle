@@ -26,9 +26,11 @@ public class MiniGameRiver : MonoBehaviour
 
     private float width = 12.5f;
     private bool initialized = false;
+    private LevelLoader levelLoader;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         GetWidth();
         BuildNewScenePref(true);
         musicSource.clip = rainMusic;
@@ -44,7 +46,7 @@ public class MiniGameRiver : MonoBehaviour
     private void OnOnFactSequenceCompleted()
     {
         // Handle fact sequence completion if needed
-        SceneManager.LoadScene("Ocean");
+        levelLoader.LoadLevel("Ocean");
     }
     private IEnumerator StartFactsWithDelay()
     {

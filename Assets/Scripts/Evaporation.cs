@@ -26,6 +26,7 @@ public class Evaporation : MonoBehaviour
     
     [SerializeField] private AudioClip musicClip;
     [SerializeField] private AudioSource musicSource;
+    private LevelLoader levelLoader;
     
     
 
@@ -37,6 +38,7 @@ public class Evaporation : MonoBehaviour
 
     void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         // Initialize audio
         musicSource.clip = musicClip;
         musicSource.loop = true;
@@ -52,7 +54,9 @@ public class Evaporation : MonoBehaviour
     
     private void InformationOnOnFactSequenceCompleted()
     {
-        SceneManager.LoadScene("Condensation");
+        // Handle fact sequence completion if needed
+        levelLoader.LoadLevel("Condensation");
+        //SceneManager.LoadScene("Evaporation");
     }
     private IEnumerator StartFactsWithDelay()
     {

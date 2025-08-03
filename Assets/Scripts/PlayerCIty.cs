@@ -30,6 +30,8 @@ public class PlayerCIty : MonoBehaviour
 	public AudioClip hurtSound;
 	public AudioClip fallSound;
 
+	private LevelLoader levelLoader;
+
 	private void Start()
 	{
 		Information.OnFactSequenceCompleted += InformationOnOnFactSequenceCompleted;
@@ -41,10 +43,12 @@ public class PlayerCIty : MonoBehaviour
 			StartCoroutine(StartFactsWithDelay());
 		}
 		playerAudioSource = GetComponent<AudioSource>();
+		levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 	}
 
 	private void InformationOnOnFactSequenceCompleted()
 	{
+		Debug.Log($"[PlayerCIty] OnFactSequenceCompleted triggered. Current scene: {UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}, reached: {reached}, finished: {finished}");
 		finished = true;
 	}
 
@@ -56,6 +60,10 @@ public class PlayerCIty : MonoBehaviour
     
 	private void OnDestroy()
 	{
+		Debug.Log("[PlayerCIty] OnDestroy called - unsubscribing from events");
+		// Unsubscribe from events
+		Information.OnFactSequenceCompleted -= InformationOnOnFactSequenceCompleted;
+		
 		// Stop fact sequence when minigame ends
 		if (Information.Instance != null && Information.Instance.IsPlayingSequence())
 		{
@@ -65,10 +73,11 @@ public class PlayerCIty : MonoBehaviour
 
 	private void Update()
 	{
-		if (finished && reached)
-		{
-			SceneManager.LoadScene("River");
-		}
+		if (reached && finished)
+			{
+				Debug.Log("[PlayerCIty] Both reached and finished are true. Loading River scene.");
+				levelLoader.LoadLevel("River");
+			}
 		if (reached)
 		{
 			return;

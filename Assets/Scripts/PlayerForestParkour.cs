@@ -21,10 +21,12 @@ public class PlayerForestParkour : MonoBehaviour
     public AudioClip moveSound;
     public AudioClip hurtSound;
     public AudioClip fallSound;
+    private LevelLoader levelLoader;
 
 
     private void Start()
     {
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         miniGameForestManager = GameObject.Find("MiniGame2ManagerForest").GetComponent<MiniGameForestManager>();
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
@@ -73,7 +75,7 @@ public class PlayerForestParkour : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Finish"))
             {
-                SceneManager.LoadScene("River");
+                levelLoader.LoadLevel("River");
             }
         }
     }
